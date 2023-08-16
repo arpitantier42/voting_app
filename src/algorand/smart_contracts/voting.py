@@ -6,7 +6,8 @@ from beaker.lib.strings import Itoa
 import pyteal as pt
 from pyteal.types import require_type
 
-from .op_up import OpUpState, op_up_blueprint
+from .op_up import OpUpState
+from .op_up import op_up_blueprint
 
 from smart_contracts.helpers.deployment_standard import deploy_time_permanence_control
 
@@ -38,7 +39,7 @@ ONE = pt.Int(1)
 
 def ForRange(  # noqa: N802
     idx: pt.ScratchVar,
-    *,
+    *,clear,
     start: pt.Expr = ZERO,
     stop: pt.ScratchVar,
     step: pt.Expr = ONE,
@@ -626,3 +627,4 @@ def vote(
         app.state.votes[voter].set(answer_ids.encode()),
         app.state.voter_count.set(app.state.voter_count.get() + ONE),
     )
+

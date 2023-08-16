@@ -192,12 +192,12 @@ export default function Review() {
             </div>
           </div>
         </div>
-        {error && (
+        {/* {error && (
           <Alert className="max-w-xl mt-4 text-white bg-red-600 font-semibold" icon={false}>
             <Typography>Could not create voting round contract:</Typography>
             <Typography>{error}</Typography>
           </Alert>
-        )}
+        )} */}
         <ConfirmationDialog
           showCancel={reviewStep < VoteCreationReviewSteps.Bootstrap}
           title={

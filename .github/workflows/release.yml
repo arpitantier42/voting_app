@@ -127,7 +127,7 @@ jobs:
           aws-region: us-west-2
           static-site-transforms: |-
             VITE_ALGOD_NODE_CONFIG_TOKEN:${{ secrets.ALGOD_NODE_CONFIG_TOKEN }}
-            VITE_ALGOD_NODE_CONFIG_SERVER:${{ vars.ALGOD_NODE_CONFIG_SERVER }}
+            VITE_ALGOD_NODE_CONFIG_SERVER:${{ vars. }}
             VITE_ALGOD_NODE_CONFIG_PORT:${{ vars.ALGOD_NODE_CONFIG_PORT }}
             VITE_ALGOD_NETWORK:${{ vars.ALGOD_NETWORK }}
             VITE_INDEXER_SERVER:${{ vars.INDEXER_SERVER }}
